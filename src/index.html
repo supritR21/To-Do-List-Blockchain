@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List | Blockchain</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-center">Blockchain Todo List</h1>
+
+      <div id="accountArea" class="well">
+        <strong>Account:</strong> <span id="account"></span>
+      </div>
+
+      <form onSubmit="App.createTask(); return false;">
+        <input id="newTask" class="form-control" type="text" placeholder="Add new task..." required />
+        <button class="btn btn-primary btn-block" type="submit">Add Task</button>
+      </form>
+
+      <ul id="taskList" class="list-group" style="margin-top: 20px;"></ul>
+    </div>
+
+    <!-- Web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+
+    <!-- Truffle Contract -->
+    <!-- Add this before your app.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@truffle/contract@4.3.42/dist/truffle-contract.min.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Your App JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
